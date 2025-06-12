@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Kurum Arama Motoru</title>
   <style>
     body {
@@ -10,7 +11,6 @@
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to right, #f1f4ff, #e3eafc);
     }
-
     header {
       background-color: #002855;
       color: white;
@@ -19,17 +19,14 @@
       align-items: center;
       padding: 16px 32px;
     }
-
     header h1 {
       font-size: 20px;
       margin: 0;
     }
-
     header img {
       height: 50px;
       width: auto;
     }
-
     .container {
       max-width: 900px;
       margin: 40px auto;
@@ -38,7 +35,6 @@
       border-radius: 16px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
-
     input[type="text"] {
       width: 100%;
       padding: 14px;
@@ -48,33 +44,27 @@
       margin-bottom: 25px;
       box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
     }
-
     table {
       width: 100%;
       border-collapse: collapse;
       display: none;
     }
-
     th, td {
       padding: 14px;
       border-bottom: 1px solid #eee;
       text-align: left;
     }
-
     th {
       background-color: #f9f9f9;
     }
-
     tr:hover {
       background-color: #f1f1f1;
     }
-
     @media (max-width: 600px) {
       header {
         flex-direction: column;
         align-items: flex-start;
       }
-
       header img {
         margin-top: 10px;
       }
@@ -89,7 +79,7 @@
 </header>
 
 <div class="container">
-  <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Kurum adı veya Detsis numarası yaz...">
+  <input type="text" id="searchInput" oninput="searchTable()" placeholder="Kurum adı veya Detsis numarası yaz...">
   <table id="dataTable">
     <thead>
       <tr>
@@ -98,12 +88,222 @@
       </tr>
     </thead>
     <tbody id="tableBody">
-      <tr><td>62164930</td><td>IĞDIR İL MİLLÎ EĞİTİM MÜDÜRLÜĞÜ</td></tr>
-      <tr><td>53214128</td><td>100. YIL ANAOKULU MÜDÜRLÜĞÜ</td></tr>
-      <tr><td>48739494</td><td>125. YIL ANADOLU LİSESİ MÜDÜRLÜĞÜ</td></tr>
-      <tr><td>27257709</td><td>14 KASIM ANAOKULU MÜDÜRLÜĞÜ</td></tr>
-      <tr><td>49882924</td><td>15 TEMMUZ ANAOKULU MÜDÜRLÜĞÜ</td></tr>
-    </tbody>
+<tr><td>62164930</td><td>IĞDIR İL MİLLİ EĞİTİM MÜDÜRLÜĞÜ</td></tr>
+<tr><td>53214128</td><td>100. YIL ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>48739494</td><td>125. YIL ANADOLU LİSESİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>27257709</td><td>14 KASIM ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>49882924</td><td>15 TEMMUZ ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>93397354</td><td>15 TEMMUZ ŞEHİTLERİ ANADOLU LİSESİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>58419291</td><td>70. YIL CUMHURİYET MESLEKİ VE TEKNİK ANADOLU LİSESİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>95763054</td><td>75. YIL ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>32040087</td><td>AĞAVER İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>72624018</td><td>AKŞEMSEDDİN İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>65523908</td><td>AKŞEMSEDDİN ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>88322767</td><td>AKYUMAK İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>82449319</td><td>ALİBEYKÖY İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>28352401</td><td>ALİBEYKÖY ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>46718992</td><td>ALİKAMERLİ İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>84143398</td><td>ALİKAMERLİ ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>35654107</td><td>ALİKÖÇEK İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>75745733</td><td>ARAS MESLEKİ VE TEKNİK ANADOLU LİSESİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>64128396</td><td>ASMA İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>77053918</td><td>AŞAĞI ÇARIKÇI İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>42143300</td><td>AŞAĞI ERHACI İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>98669010</td><td>AŞAĞI ERHACI ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>53992118</td><td>ATATÜRK ANADOLU LİSESİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>21987156</td><td>ATATÜRK ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>34403428</td><td>ATATÜRK İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>97258625</td><td>AZER-İSHAK YAYCILI BİLİM VE SANAT MERKEZİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>38933279</td><td>AZİZ SANCAR ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>25607546</td><td>BASIN VE HALKLA İLİŞKİLER ŞUBE MÜDÜRLÜĞÜ</td></tr>
+<tr><td>34948221</td><td>BAYRAKTUTAN HACI HANIM TAŞDEMİR İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>38337634</td><td>BAYRAKTUTAN HACI HANIM TAŞDEMİR ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>12104474</td><td>BESTİ AYDENİZ MESLEKİ VE TEKNİK ANADOLU LİSESİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>79918383</td><td>BİLGİ İŞLEM VE EĞİTİM TEKNOLOJİLERİ ŞUBE MÜDÜRLÜĞÜ</td></tr>
+<tr><td>97245487</td><td>BORSA İSTANBUL ANADOLU LİSESİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>21291352</td><td>BORSA İSTANBUL İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>67343734</td><td>CUMHURİYET ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>22276349</td><td>CUMHURİYET İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>83554847</td><td>CUMHURİYET ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>92084622</td><td>ÇAKIRTAŞ İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>30882536</td><td>ÇAKIRTAŞ ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>74640337</td><td>ÇALPALA İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>62449597</td><td>DESTEK ŞUBE MÜDÜRLÜĞÜ</td></tr>
+<tr><td>74979662</td><td>DİN ÖĞRETİMİ ŞUBE MÜDÜRLÜĞÜ</td></tr>
+<tr><td>13856472</td><td>EĞİTİM MÜFETTİŞLERİ BAŞKANLIĞI</td></tr>
+<tr><td>15715996</td><td>ENERJİ YÖNETİM BİRİMİ</td></tr>
+<tr><td>93606801</td><td>ENGİNALAN İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>44497393</td><td>ENGİNALAN ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>28865665</td><td>ENVER BEY ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>34475869</td><td>EVCİ ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>13962526</td><td>FATİH SULTAN MEHMET ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>88905487</td><td>FATİH SULTAN MEHMET İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>28843237</td><td>GÜLPINAR İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>64586066</td><td>GÜLPINAR ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>39808244</td><td>HAKMEHMET İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>25997945</td><td>HAKVEYİS İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>51846094</td><td>HAKVEYİS ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>92735103</td><td>HALFELİ BORSA İSTANBUL İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>69511425</td><td>HALFELİ BORSA İSTANBUL ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>29394922</td><td>HALFELİ MİLLİ İRADE İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>59683314</td><td>HALFELİ ŞEHİT ER ABDULCEBBAR PARİN İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>99169666</td><td>HALFELİ ŞEHİT KAYMAKAM MUHAMMET FATİH SAFİTÜRK İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>30726624</td><td>HARMANDÖVEN İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>21083839</td><td>HAYAT BOYU ÖĞRENME ŞUBE MÜDÜRLÜĞÜ</td></tr>
+<tr><td>45477986</td><td>HAYDAR ALİYEV FEN LİSESİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>57478394</td><td>HOŞHABER ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>84667043</td><td>HOŞHABER İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>21377457</td><td>HUKUK HİZMETLERİ BİRİMİ</td></tr>
+<tr><td>86412741</td><td>HÜRRİYET İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>19734842</td><td>HÜRRİYET İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>37801076</td><td>HÜRRİYET ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>70167012</td><td>HÜSNÜ M. ÖZYEĞİN İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>49942254</td><td>IĞDIR ANADOLU LİSESİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>76668001</td><td>IĞDIR ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>86327201</td><td>IĞDIR GÜZEL SANATLAR LİSESİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>23704812</td><td>IĞDIR HALK EĞİTİMİ MERKEZİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>73753791</td><td>IĞDIR KIZ ANADOLU İMAM HATİP LİSESİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>98538603</td><td>IĞDIR MESLEKİ EĞİTİM MERKEZİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>24293494</td><td>IĞDIR MESLEKİ VE TEKNİK ANADOLU LİSESİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>61942664</td><td>IĞDIR MİLLİ EĞİTİM VAKFI ANADOLU LİSESİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>43256827</td><td>IĞDIR NECİP FAZIL KISAKÜREK ANADOLU İMAM HATİP LİSESİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>54688019</td><td>IĞDIR ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>66521343</td><td>IĞDIR ÖLÇME DEĞERLENDİRME MERKEZİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>68350301</td><td>IĞDIR ÖZEL EĞİTİM MESLEK OKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>41844585</td><td>IĞDIR ÖZEL EĞİTİM UYGULAMA OKULU I. KADEME MÜDÜRLÜĞÜ</td></tr>
+<tr><td>99925348</td><td>IĞDIR ÖZEL EĞİTİM UYGULAMA OKULU II. KADEME MÜDÜRLÜĞÜ</td></tr>
+<tr><td>36069143</td><td>IĞDIR ÖZEL EĞİTİM UYGULAMA OKULU III. KADEME MÜDÜRLÜĞÜ</td></tr>
+<tr><td>15724646</td><td>IĞDIR REHBERLİK VE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>58022823</td><td>IĞDIR ŞEHİT FATİH KARA SPOR LİSESİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>72139683</td><td>İL MİLLÎ EĞİTİM DANIŞMA KOMİSYONU</td></tr>
+<tr><td>57413857</td><td>İL MİLLÎ EĞİTİM DİSİPLİN KURULU</td></tr>
+<tr><td>39847231</td><td>İL MİLLÎ EĞİTİM KOMİSYONU</td></tr>
+<tr><td>47583411</td><td>İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>81426498</td><td>İNÖNÜ İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>38791818</td><td>İNÖNÜ ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>50213857</td><td>İNSAN KAYNAKLARI YÖNETİMİ ŞUBE MÜDÜRLÜĞÜ</td></tr>
+<tr><td>73643935</td><td>İNŞAAT VE EMLAK ŞUBE MÜDÜRLÜĞÜ</td></tr>
+<tr><td>96107204</td><td>İPEK YOLU ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>86643134</td><td>İŞ YERİ SAĞLIK VE GÜVENLİK BİRİMİ</td></tr>
+<tr><td>38891167</td><td>KADIKIŞLAK - NECEFALİ İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>38073379</td><td>KAFKAS MESLEKİ VE TEKNİK ANADOLU LİSESİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>61321810</td><td>KARAAĞAÇ İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>54402264</td><td>KARAAĞAÇ İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>51305766</td><td>KARABAĞ ÖZEL EĞİTİM ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>47705043</td><td>KARAÇOMAK İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>68107949</td><td>KASIMCAN İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>23019543</td><td>KAVAKTEPE İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>42469499</td><td>KAZANCI İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>19088245</td><td>KAZANCI ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>25139703</td><td>KAZIM KARABEKİR İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>14258062</td><td>KERVANSARAY İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>29756107</td><td>KERVANSARAY İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>40228880</td><td>KERVANSARAY İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>47146997</td><td>KERVANSARAY ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>76391836</td><td>KIZILKULE İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>27967786</td><td>KURTULUŞ İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>96362201</td><td>KUZUGÜDEN İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>15108192</td><td>KÜLLÜK İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>83685925</td><td>KÜLLÜK ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>88165334</td><td>MAHMUT NEDİM KUYUMCU İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>87573611</td><td>MAHMUT NEDİM KUYUMCU ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>99658973</td><td>MAREŞAL FEVZİ ÇAKMAK İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>10143148</td><td>MAREŞAL FEVZİ ÇAKMAK ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>35027556</td><td>MEHMET AKİF ERSOY İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>26501638</td><td>MEHMET AKİF ERSOY ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>47410388</td><td>MEHMET ÇAVUŞ ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>48983697</td><td>MEHMET ÇAVUŞ İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>38976196</td><td>MEHMET ÇAVUŞ ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>76533476</td><td>MEHMET MURAT İŞLER SOSYAL BİLİMLER LİSESİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>33154980</td><td>MELEKLI ATATÜRK İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>16624705</td><td>MELEKLİ 100. YIL ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>64734267</td><td>MELEKLİ ŞEHİT ER AYTEKİN ARSLAN İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>76836628</td><td>MELEKLİ ŞEHİT PİYADE ÇAVUŞ TUNAY ŞAFAK ÇOK PROGRAMLI ANADOLU LİSESİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>21428481</td><td>MESLEKİ VE TEKNİK EĞİTİM ŞUBE MÜDÜRLÜĞÜ</td></tr>
+<tr><td>80296712</td><td>MEVLANA İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>70932003</td><td>MEZRA İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>62121662</td><td>MİMAR SİNAN İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>18308660</td><td>MİMAR SİNAN İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>67475100</td><td>MİMAR SİNAN ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>91513079</td><td>MUTLAY SAYAN ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>95436171</td><td>MUTLAY SAYAN ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>24653408</td><td>NENE HATUN MESLEKİ VE TEKNİK ANADOLU LİSESİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>29767465</td><td>NİŞANKAYA İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>20920233</td><td>OBA İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>36796183</td><td>ORTAÖĞRETİM ŞUBE MÜDÜRLÜĞÜ</td></tr>
+<tr><td>29341830</td><td>ÖĞRETMEN YETİŞTİRME VE GELİŞTİRME ŞUBE MÜDÜRLÜĞÜ</td></tr>
+<tr><td>16278239</td><td>ÖĞRETMEN YETİŞTİRME VE GELİŞTİRME ŞUBE MÜDÜRLÜĞÜ</td></tr>
+<tr><td>82612132</td><td>ÖĞRETMENEVİ VE AKŞAM SANAT OKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>76011903</td><td>ÖLÇME, DEĞERLENDİRME VE SINAV ŞUBE MÜDÜRLÜĞÜ</td></tr>
+<tr><td>25144432</td><td>ÖZDEMİR İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>71629928</td><td>ÖZDEMİR ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>14051412</td><td>ÖZEL BÜRO</td></tr>
+<tr><td>12184195</td><td>ÖZEL EĞİTİM VE REHBERLİK ŞUBE MÜDÜRLÜĞÜ</td></tr>
+<tr><td>64708217</td><td>IĞDIR ÖZEL EĞİTİM MESLEK OKULU</td></tr>
+<tr><td>28838520</td><td>IĞDIR ÖZEL EĞİTİM MESLEK OKULU</td></tr>
+<tr><td>13805266</td><td>ÖZEL ÖĞRETİM KURUMLARI ŞUBE MÜDÜRLÜĞÜ</td></tr>
+<tr><td>68621539</td><td>PINARBAŞI İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>96014362</td><td>SİVİL SAVUNMA HİZMETLERİ BÜROSU</td></tr>
+<tr><td>31219358</td><td>SÖĞÜTLÜ ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>19255454</td><td>STRATEJİ GELİŞTİRME ŞUBE MÜDÜRLÜĞÜ</td></tr>
+<tr><td>96304802</td><td>SUVEREN İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>33239757</td><td>SUVEREN İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>97832061</td><td>SUVEREN ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>23549226</td><td>SÜRMELİ ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>84129660</td><td>ŞAMİL BEY İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>70839775</td><td>ŞAMİL BEY ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>12800638</td><td>ŞEHİT BAŞKOMİSER MEHMET PARLAK İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>45012387</td><td>ŞEHİT BAŞKOMİSER MEHMET PARLAK İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>46048980</td><td>ŞEHİT BAŞKOMİSER MEHMET PARLAK ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>16311421</td><td>ŞEHİT CİHAT SAYIM ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>78785592</td><td>ŞEHİT EMİN GÜNER ANADOLU İMAM HATİP LİSESİ MÜDÜRLÜĞÜ</td></tr>
+<tr><td>77459522</td><td>ŞEHİT EMİN GÜNER İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>95551082</td><td>ŞEHİT ER ERKAN AKDENİZ ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>88823732</td><td>ŞEHİT ER ERKAN AKDENİZ İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>21532411</td><td>ŞEHİT ER ERKAN AKDENİZ ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>89832577</td><td>ŞEHİT ER MEHMET ÖNER İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>94059778</td><td>ŞEHİT ER ZEYNEL ABİDİN KAYA ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>50857069</td><td>ŞEHİT EREN BÜLBÜL ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>76465949</td><td>ŞEHİT KOMİSER MEHMET PARLAK İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>36807707</td><td>ŞEHİT ÖĞRETMEN AYBÜKE YALÇIN ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>15958519</td><td>ŞEHİT ÖĞRETMEN NECMETTİN YILMAZ ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>93884086</td><td>ŞEHİT ÖĞRETMEN ŞEVKİ AKGÜN İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>40790404</td><td>ŞEHİT ÖĞRETMEN ŞEVKİ AKGÜN İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>53756394</td><td>ŞEHİT ÖĞRETMEN ŞEVKİ AKGÜN ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>91188263</td><td>ŞEHİT PİYADE ER ERDEM YÜCE İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>74954732</td><td>ŞEHİT POLİS ADEM CANKURTARAN ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>43134821</td><td>ŞEHİT POLİS İSMET YILDIZ İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>44809883</td><td>ŞEHİT POLİS KEMAL ADİR İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>89450690</td><td>ŞEHİT POLİS MEHMET KESEMEN İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>29005611</td><td>ŞEHİT POLİS VELİ KABALAY ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>32942926</td><td>ŞEHİT POLİS VELİ KABALAY ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>56631376</td><td>ŞEHİT ÜSTEĞMEN CEVDET ÇİFTÇİ İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>31564710</td><td>ŞEYH EDABALİ İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>85301891</td><td>ŞEYH EDEBALİ ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>53262058</td><td>ŞUŞA ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>39914768</td><td>TACİRLİ İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>20875565</td><td>TACİRLİ İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>50510358</td><td>TAŞLICA İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>49829484</td><td>TEMEL EĞİTİM ŞUBE MÜDÜRLÜĞÜ</td></tr>
+<tr><td>24062935</td><td>YAYCI 75. YIL İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>31145354</td><td>YAYCI 75. YIL ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>87117207</td><td>YENİ MAHALLE İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>26748477</td><td>YUKARI ÇARIKÇI İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>54797042</td><td>YUKARI ÇARIKÇI ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>90985878</td><td>YUKARI ERHACI İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>24700507</td><td>YUKARI ERHACI İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>39344541</td><td>YUKARI ERHACI ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>74153608</td><td>YUNUS EMRE İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>47418840</td><td>YUNUS EMRE ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>99375282</td><td>YÜKSEKÖĞRETİM VE YURT DIŞI EĞİTİM ŞUBE MÜDÜRLÜĞÜ</td></tr>
+<tr><td>15224104</td><td>YÜZBAŞI ABDURRAHMAN ÖZALP İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>19280230</td><td>YÜZBAŞILAR ŞEHİT ER AYDIN KARAKUŞ İLKOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>85020208</td><td>YÜZBAŞILAR ŞEHİT ER AYDIN KARAKUŞ İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>53165598</td><td>YÜZBAŞILAR ŞEHİT ER AYDIN KARAKUŞ ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>81953586</td><td>ZİYA GÖKALP ORTAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>59762723</td><td>ZÜBEYDE HANIM ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+<tr><td>19883201</td><td>ZÜBEYDE HANIM ÖZEL EĞİTİM ANAOKULU MÜDÜRLÜĞÜ</td></tr>
+</tbody>
   </table>
 </div>
 
@@ -121,7 +321,7 @@ function searchTable() {
     if (match) found = true;
   });
 
-  table.style.display = found ? "table" : "none";
+  table.style.display = found ? "block" : "none";
 }
 </script>
 
