@@ -7,56 +7,88 @@
     <title>Kurum Arama Motoru</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            background: #f4f4f4;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #f7f8fc, #e0e7ff);
+            margin: 0;
+            padding: 0;
         }
-        h1 {
-            text-align: center;
-            color: #333;
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #002855;
+            padding: 15px 30px;
+            color: white;
         }
+
+        header img {
+            height: 40px;
+        }
+
+        header h1 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
         input[type="text"] {
             width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
+            padding: 14px;
             font-size: 16px;
+            margin-bottom: 25px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            background: white;
+            display: none; /* Başlangıçta gizli */
         }
+
         th, td {
-            padding: 12px;
-            border: 1px solid #ccc;
+            padding: 12px 16px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #f0f0f0;
             text-align: left;
         }
-        th {
-            background-color: #eaeaea;
-        }
+
         tr:hover {
-            background-color: #f1f1f1;
+            background-color: #f9f9f9;
         }
+
         @media (max-width: 600px) {
-            table, thead, tbody, th, td, tr {
-                display: block;
+            header {
+                flex-direction: column;
+                align-items: flex-start;
             }
-            td {
-                border: none;
-                position: relative;
-                padding-left: 50%;
-            }
-            td::before {
-                content: attr(data-label);
-                position: absolute;
-                left: 10px;
-                font-weight: bold;
+
+            header h1 {
+                margin-top: 10px;
             }
         }
     </style>
 </head>
 <body>
+
+<header>
     <h1>Kurum Arama Motoru</h1>
+    <img src="https://raw.githubusercontent.com/Luttarte/liste/main/logo.png" alt="MEB Logo">
+</header>
+
+<div class="container">
     <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Kurum adı veya Detsis numarası yaz...">
     <table id="dataTable">
         <thead>
@@ -68,1093 +100,1106 @@
         <tbody>
 
             <tr>
-                <td data-label="Detsis Numarası">62164930</td>
-                <td data-label="Birim Adı">IĞDIR İL MİLLİ EĞİTİM MÜDÜRLÜĞÜ</td>
+                <td>62164930</td>
+                <td>IĞDIR İL MİLLİ EĞİTİM MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">53214128</td>
-                <td data-label="Birim Adı">100. YIL ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>53214128</td>
+                <td>100. YIL ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">48739494</td>
-                <td data-label="Birim Adı">125. YIL ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
+                <td>48739494</td>
+                <td>125. YIL ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">27257709</td>
-                <td data-label="Birim Adı">14 KASIM ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>27257709</td>
+                <td>14 KASIM ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">49882924</td>
-                <td data-label="Birim Adı">15 TEMMUZ ANAOKULU MÜDÜRLÜĞÜ </td>
+                <td>49882924</td>
+                <td>15 TEMMUZ ANAOKULU MÜDÜRLÜĞÜ </td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">93397354</td>
-                <td data-label="Birim Adı">15 TEMMUZ ŞEHİTLERİ ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
+                <td>93397354</td>
+                <td>15 TEMMUZ ŞEHİTLERİ ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">58419291</td>
-                <td data-label="Birim Adı">70. YIL CUMHURİYET MESLEKİ VE TEKNİK ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
+                <td>58419291</td>
+                <td>70. YIL CUMHURİYET MESLEKİ VE TEKNİK ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">95763054</td>
-                <td data-label="Birim Adı">75. YIL ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>95763054</td>
+                <td>75. YIL ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">32040087</td>
-                <td data-label="Birim Adı">AĞAVER İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>32040087</td>
+                <td>AĞAVER İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">72624018</td>
-                <td data-label="Birim Adı">AKŞEMSEDDİN İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>72624018</td>
+                <td>AKŞEMSEDDİN İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">65523908</td>
-                <td data-label="Birim Adı">AKŞEMSEDDİN ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>65523908</td>
+                <td>AKŞEMSEDDİN ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">88322767</td>
-                <td data-label="Birim Adı">AKYUMAK İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>88322767</td>
+                <td>AKYUMAK İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">82449319</td>
-                <td data-label="Birim Adı">ALİBEYKÖY İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>82449319</td>
+                <td>ALİBEYKÖY İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">28352401</td>
-                <td data-label="Birim Adı">ALİBEYKÖY ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>28352401</td>
+                <td>ALİBEYKÖY ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">46718992</td>
-                <td data-label="Birim Adı">ALİKAMERLİ İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>46718992</td>
+                <td>ALİKAMERLİ İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">84143398</td>
-                <td data-label="Birim Adı">ALİKAMERLİ ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>84143398</td>
+                <td>ALİKAMERLİ ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">35654107</td>
-                <td data-label="Birim Adı">ALİKÖÇEK İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>35654107</td>
+                <td>ALİKÖÇEK İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">75745733</td>
-                <td data-label="Birim Adı">ARAS MESLEKİ VE TEKNİK ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
+                <td>75745733</td>
+                <td>ARAS MESLEKİ VE TEKNİK ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">64128396</td>
-                <td data-label="Birim Adı">ASMA İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>64128396</td>
+                <td>ASMA İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">77053918</td>
-                <td data-label="Birim Adı">AŞAĞI ÇARIKÇI İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>77053918</td>
+                <td>AŞAĞI ÇARIKÇI İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">42143300</td>
-                <td data-label="Birim Adı">AŞAĞI ERHACI İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>42143300</td>
+                <td>AŞAĞI ERHACI İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">98669010</td>
-                <td data-label="Birim Adı">AŞAĞI ERHACI ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>98669010</td>
+                <td>AŞAĞI ERHACI ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">53992118</td>
-                <td data-label="Birim Adı">ATATÜRK ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
+                <td>53992118</td>
+                <td>ATATÜRK ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">21987156</td>
-                <td data-label="Birim Adı">ATATÜRK ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>21987156</td>
+                <td>ATATÜRK ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">34403428</td>
-                <td data-label="Birim Adı">ATATÜRK İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>34403428</td>
+                <td>ATATÜRK İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">97258625</td>
-                <td data-label="Birim Adı">AZER-İSHAK YAYCILI BİLİM VE SANAT MERKEZİ MÜDÜRLÜĞÜ</td>
+                <td>97258625</td>
+                <td>AZER-İSHAK YAYCILI BİLİM VE SANAT MERKEZİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">38933279</td>
-                <td data-label="Birim Adı">AZİZ SANCAR ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>38933279</td>
+                <td>AZİZ SANCAR ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">25607546</td>
-                <td data-label="Birim Adı">BASIN VE HALKLA İLİŞKİLER ŞUBE MÜDÜRLÜĞÜ</td>
+                <td>25607546</td>
+                <td>BASIN VE HALKLA İLİŞKİLER ŞUBE MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">34948221</td>
-                <td data-label="Birim Adı">BAYRAKTUTAN HACI HANIM TAŞDEMİR İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>34948221</td>
+                <td>BAYRAKTUTAN HACI HANIM TAŞDEMİR İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">38337634</td>
-                <td data-label="Birim Adı">BAYRAKTUTAN HACI HANIM TAŞDEMİR ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>38337634</td>
+                <td>BAYRAKTUTAN HACI HANIM TAŞDEMİR ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">12104474</td>
-                <td data-label="Birim Adı">BESTİ AYDENİZ MESLEKİ VE TEKNİK ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
+                <td>12104474</td>
+                <td>BESTİ AYDENİZ MESLEKİ VE TEKNİK ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">79918383</td>
-                <td data-label="Birim Adı">BİLGİ İŞLEM VE EĞİTİM TEKNOLOJİLERİ ŞUBE MÜDÜRLÜĞÜ</td>
+                <td>79918383</td>
+                <td>BİLGİ İŞLEM VE EĞİTİM TEKNOLOJİLERİ ŞUBE MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">97245487</td>
-                <td data-label="Birim Adı">BORSA İSTANBUL ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
+                <td>97245487</td>
+                <td>BORSA İSTANBUL ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">21291352</td>
-                <td data-label="Birim Adı">BORSA İSTANBUL İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>21291352</td>
+                <td>BORSA İSTANBUL İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">67343734</td>
-                <td data-label="Birim Adı">CUMHURİYET ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>67343734</td>
+                <td>CUMHURİYET ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">22276349</td>
-                <td data-label="Birim Adı">CUMHURİYET İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>22276349</td>
+                <td>CUMHURİYET İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">83554847</td>
-                <td data-label="Birim Adı">CUMHURİYET ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>83554847</td>
+                <td>CUMHURİYET ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">92084622</td>
-                <td data-label="Birim Adı">ÇAKIRTAŞ İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>92084622</td>
+                <td>ÇAKIRTAŞ İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">30882536</td>
-                <td data-label="Birim Adı">ÇAKIRTAŞ ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>30882536</td>
+                <td>ÇAKIRTAŞ ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">74640337</td>
-                <td data-label="Birim Adı">ÇALPALA İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>74640337</td>
+                <td>ÇALPALA İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">62449597</td>
-                <td data-label="Birim Adı">DESTEK ŞUBE MÜDÜRLÜĞÜ</td>
+                <td>62449597</td>
+                <td>DESTEK ŞUBE MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">74979662</td>
-                <td data-label="Birim Adı">DİN ÖĞRETİMİ ŞUBE MÜDÜRLÜĞÜ</td>
+                <td>74979662</td>
+                <td>DİN ÖĞRETİMİ ŞUBE MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">13856472</td>
-                <td data-label="Birim Adı">EĞİTİM MÜFETTİŞLERİ BAŞKANLIĞI</td>
+                <td>13856472</td>
+                <td>EĞİTİM MÜFETTİŞLERİ BAŞKANLIĞI</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">15715996</td>
-                <td data-label="Birim Adı">ENERJİ YÖNETİM BİRİMİ</td>
+                <td>15715996</td>
+                <td>ENERJİ YÖNETİM BİRİMİ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">93606801</td>
-                <td data-label="Birim Adı">ENGİNALAN İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>93606801</td>
+                <td>ENGİNALAN İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">44497393</td>
-                <td data-label="Birim Adı">ENGİNALAN ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>44497393</td>
+                <td>ENGİNALAN ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">28865665</td>
-                <td data-label="Birim Adı">ENVER BEY ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>28865665</td>
+                <td>ENVER BEY ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">34475869</td>
-                <td data-label="Birim Adı">EVCİ ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>34475869</td>
+                <td>EVCİ ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">13962526</td>
-                <td data-label="Birim Adı">FATİH SULTAN MEHMET ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>13962526</td>
+                <td>FATİH SULTAN MEHMET ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">88905487</td>
-                <td data-label="Birim Adı">FATİH SULTAN MEHMET İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>88905487</td>
+                <td>FATİH SULTAN MEHMET İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">28843237</td>
-                <td data-label="Birim Adı">GÜLPINAR İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>28843237</td>
+                <td>GÜLPINAR İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">64586066</td>
-                <td data-label="Birim Adı">GÜLPINAR ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>64586066</td>
+                <td>GÜLPINAR ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">39808244</td>
-                <td data-label="Birim Adı">HAKMEHMET İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>39808244</td>
+                <td>HAKMEHMET İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">25997945</td>
-                <td data-label="Birim Adı">HAKVEYİS İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>25997945</td>
+                <td>HAKVEYİS İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">51846094</td>
-                <td data-label="Birim Adı">HAKVEYİS ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>51846094</td>
+                <td>HAKVEYİS ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">92735103</td>
-                <td data-label="Birim Adı">HALFELİ BORSA İSTANBUL İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>92735103</td>
+                <td>HALFELİ BORSA İSTANBUL İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">69511425</td>
-                <td data-label="Birim Adı">HALFELİ BORSA İSTANBUL ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>69511425</td>
+                <td>HALFELİ BORSA İSTANBUL ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">29394922</td>
-                <td data-label="Birim Adı">HALFELİ MİLLİ İRADE İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>29394922</td>
+                <td>HALFELİ MİLLİ İRADE İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">59683314</td>
-                <td data-label="Birim Adı">HALFELİ ŞEHİT ER ABDULCEBBAR PARİN İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>59683314</td>
+                <td>HALFELİ ŞEHİT ER ABDULCEBBAR PARİN İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">99169666</td>
-                <td data-label="Birim Adı">HALFELİ ŞEHİT KAYMAKAM MUHAMMET FATİH SAFİTÜRK İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>99169666</td>
+                <td>HALFELİ ŞEHİT KAYMAKAM MUHAMMET FATİH SAFİTÜRK İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">30726624</td>
-                <td data-label="Birim Adı">HARMANDÖVEN İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>30726624</td>
+                <td>HARMANDÖVEN İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">21083839</td>
-                <td data-label="Birim Adı">HAYAT BOYU ÖĞRENME ŞUBE MÜDÜRLÜĞÜ</td>
+                <td>21083839</td>
+                <td>HAYAT BOYU ÖĞRENME ŞUBE MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">45477986</td>
-                <td data-label="Birim Adı">HAYDAR ALİYEV FEN LİSESİ MÜDÜRLÜĞÜ</td>
+                <td>45477986</td>
+                <td>HAYDAR ALİYEV FEN LİSESİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">57478394</td>
-                <td data-label="Birim Adı">HOŞHABER ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>57478394</td>
+                <td>HOŞHABER ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">84667043</td>
-                <td data-label="Birim Adı">HOŞHABER İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>84667043</td>
+                <td>HOŞHABER İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">21377457</td>
-                <td data-label="Birim Adı">HUKUK HİZMETLERİ BİRİMİ</td>
+                <td>21377457</td>
+                <td>HUKUK HİZMETLERİ BİRİMİ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">86412741</td>
-                <td data-label="Birim Adı">HÜRRİYET İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>86412741</td>
+                <td>HÜRRİYET İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">19734842</td>
-                <td data-label="Birim Adı">HÜRRİYET İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>19734842</td>
+                <td>HÜRRİYET İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">37801076</td>
-                <td data-label="Birim Adı">HÜRRİYET ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>37801076</td>
+                <td>HÜRRİYET ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">70167012</td>
-                <td data-label="Birim Adı">HÜSNÜ M. ÖZYEĞİN İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>70167012</td>
+                <td>HÜSNÜ M. ÖZYEĞİN İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">49942254</td>
-                <td data-label="Birim Adı">IĞDIR ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
+                <td>49942254</td>
+                <td>IĞDIR ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">76668001</td>
-                <td data-label="Birim Adı">IĞDIR ANAOKULU MÜDÜRLÜĞÜ </td>
+                <td>76668001</td>
+                <td>IĞDIR ANAOKULU MÜDÜRLÜĞÜ </td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">86327201</td>
-                <td data-label="Birim Adı">IĞDIR GÜZEL SANATLAR LİSESİ MÜDÜRLÜĞÜ</td>
+                <td>86327201</td>
+                <td>IĞDIR GÜZEL SANATLAR LİSESİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">23704812</td>
-                <td data-label="Birim Adı">IĞDIR HALK EĞİTİMİ MERKEZİ MÜDÜRLÜĞÜ</td>
+                <td>23704812</td>
+                <td>IĞDIR HALK EĞİTİMİ MERKEZİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">73753791</td>
-                <td data-label="Birim Adı">IĞDIR KIZ ANADOLU İMAM HATİP LİSESİ MÜDÜRLÜĞÜ</td>
+                <td>73753791</td>
+                <td>IĞDIR KIZ ANADOLU İMAM HATİP LİSESİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">98538603</td>
-                <td data-label="Birim Adı">IĞDIR MESLEKİ EĞİTİM MERKEZİ MÜDÜRLÜĞÜ</td>
+                <td>98538603</td>
+                <td>IĞDIR MESLEKİ EĞİTİM MERKEZİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">24293494</td>
-                <td data-label="Birim Adı">IĞDIR MESLEKİ VE TEKNİK ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
+                <td>24293494</td>
+                <td>IĞDIR MESLEKİ VE TEKNİK ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">61942664</td>
-                <td data-label="Birim Adı">IĞDIR MİLLİ EĞİTİM VAKFI ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
+                <td>61942664</td>
+                <td>IĞDIR MİLLİ EĞİTİM VAKFI ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">43256827</td>
-                <td data-label="Birim Adı">IĞDIR NECİP FAZIL KISAKÜREK ANADOLU İMAM HATİP LİSESİ MÜDÜRLÜĞÜ</td>
+                <td>43256827</td>
+                <td>IĞDIR NECİP FAZIL KISAKÜREK ANADOLU İMAM HATİP LİSESİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">54688019</td>
-                <td data-label="Birim Adı">IĞDIR ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>54688019</td>
+                <td>IĞDIR ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">66521343</td>
-                <td data-label="Birim Adı">IĞDIR ÖLÇME DEĞERLENDİRME MERKEZİ MÜDÜRLÜĞÜ</td>
+                <td>66521343</td>
+                <td>IĞDIR ÖLÇME DEĞERLENDİRME MERKEZİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">68350301</td>
-                <td data-label="Birim Adı">IĞDIR ÖZEL EĞİTİM MESLEK OKULU MÜDÜRLÜĞÜ</td>
+                <td>68350301</td>
+                <td>IĞDIR ÖZEL EĞİTİM MESLEK OKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">41844585</td>
-                <td data-label="Birim Adı">IĞDIR ÖZEL EĞİTİM UYGULAMA OKULU I. KADEME MÜDÜRLÜĞÜ</td>
+                <td>41844585</td>
+                <td>IĞDIR ÖZEL EĞİTİM UYGULAMA OKULU I. KADEME MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">99925348</td>
-                <td data-label="Birim Adı">IĞDIR ÖZEL EĞİTİM UYGULAMA OKULU II. KADEME MÜDÜRLÜĞÜ</td>
+                <td>99925348</td>
+                <td>IĞDIR ÖZEL EĞİTİM UYGULAMA OKULU II. KADEME MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">36069143</td>
-                <td data-label="Birim Adı">IĞDIR ÖZEL EĞİTİM UYGULAMA OKULU III. KADEME MÜDÜRLÜĞÜ</td>
+                <td>36069143</td>
+                <td>IĞDIR ÖZEL EĞİTİM UYGULAMA OKULU III. KADEME MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">15724646</td>
-                <td data-label="Birim Adı">IĞDIR REHBERLİK VE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ</td>
+                <td>15724646</td>
+                <td>IĞDIR REHBERLİK VE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">58022823</td>
-                <td data-label="Birim Adı">IĞDIR ŞEHİT FATİH KARA SPOR LİSESİ MÜDÜRLÜĞÜ</td>
+                <td>58022823</td>
+                <td>IĞDIR ŞEHİT FATİH KARA SPOR LİSESİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">72139683</td>
-                <td data-label="Birim Adı">İL MİLLÎ EĞİTİM DANIŞMA KOMİSYONU</td>
+                <td>72139683</td>
+                <td>İL MİLLÎ EĞİTİM DANIŞMA KOMİSYONU</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">57413857</td>
-                <td data-label="Birim Adı">İL MİLLÎ EĞİTİM DİSİPLİN KURULU</td>
+                <td>57413857</td>
+                <td>İL MİLLÎ EĞİTİM DİSİPLİN KURULU</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">39847231</td>
-                <td data-label="Birim Adı">İL MİLLÎ EĞİTİM KOMİSYONU</td>
+                <td>39847231</td>
+                <td>İL MİLLÎ EĞİTİM KOMİSYONU</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">47583411</td>
-                <td data-label="Birim Adı">İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>47583411</td>
+                <td>İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">81426498</td>
-                <td data-label="Birim Adı">İNÖNÜ İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>81426498</td>
+                <td>İNÖNÜ İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">38791818</td>
-                <td data-label="Birim Adı">İNÖNÜ ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>38791818</td>
+                <td>İNÖNÜ ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">50213857</td>
-                <td data-label="Birim Adı">İNSAN KAYNAKLARI YÖNETİMİ ŞUBE MÜDÜRLÜĞÜ</td>
+                <td>50213857</td>
+                <td>İNSAN KAYNAKLARI YÖNETİMİ ŞUBE MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">73643935</td>
-                <td data-label="Birim Adı">İNŞAAT VE EMLAK ŞUBE MÜDÜRLÜĞÜ</td>
+                <td>73643935</td>
+                <td>İNŞAAT VE EMLAK ŞUBE MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">96107204</td>
-                <td data-label="Birim Adı">İPEK YOLU ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>96107204</td>
+                <td>İPEK YOLU ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">86643134</td>
-                <td data-label="Birim Adı">İŞ YERİ SAĞLIK VE GÜVENLİK BİRİMİ</td>
+                <td>86643134</td>
+                <td>İŞ YERİ SAĞLIK VE GÜVENLİK BİRİMİ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">38891167</td>
-                <td data-label="Birim Adı">KADIKIŞLAK - NECEFALİ İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>38891167</td>
+                <td>KADIKIŞLAK - NECEFALİ İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">38073379</td>
-                <td data-label="Birim Adı">KAFKAS MESLEKİ VE TEKNİK ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
+                <td>38073379</td>
+                <td>KAFKAS MESLEKİ VE TEKNİK ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">61321810</td>
-                <td data-label="Birim Adı">KARAAĞAÇ İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>61321810</td>
+                <td>KARAAĞAÇ İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">54402264</td>
-                <td data-label="Birim Adı">KARAAĞAÇ İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>54402264</td>
+                <td>KARAAĞAÇ İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">51305766</td>
-                <td data-label="Birim Adı">KARABAĞ ÖZEL EĞİTİM ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>51305766</td>
+                <td>KARABAĞ ÖZEL EĞİTİM ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">47705043</td>
-                <td data-label="Birim Adı">KARAÇOMAK İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>47705043</td>
+                <td>KARAÇOMAK İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">68107949</td>
-                <td data-label="Birim Adı">KASIMCAN İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>68107949</td>
+                <td>KASIMCAN İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">23019543</td>
-                <td data-label="Birim Adı">KAVAKTEPE İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>23019543</td>
+                <td>KAVAKTEPE İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">42469499</td>
-                <td data-label="Birim Adı">KAZANCI İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>42469499</td>
+                <td>KAZANCI İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">19088245</td>
-                <td data-label="Birim Adı">KAZANCI ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>19088245</td>
+                <td>KAZANCI ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">25139703</td>
-                <td data-label="Birim Adı">KAZIM KARABEKİR İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>25139703</td>
+                <td>KAZIM KARABEKİR İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">14258062</td>
-                <td data-label="Birim Adı">KERVANSARAY İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>14258062</td>
+                <td>KERVANSARAY İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">29756107</td>
-                <td data-label="Birim Adı">KERVANSARAY İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>29756107</td>
+                <td>KERVANSARAY İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">40228880</td>
-                <td data-label="Birim Adı">KERVANSARAY İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>40228880</td>
+                <td>KERVANSARAY İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">47146997</td>
-                <td data-label="Birim Adı">KERVANSARAY ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>47146997</td>
+                <td>KERVANSARAY ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">76391836</td>
-                <td data-label="Birim Adı">KIZILKULE İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>76391836</td>
+                <td>KIZILKULE İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">27967786</td>
-                <td data-label="Birim Adı">KURTULUŞ İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>27967786</td>
+                <td>KURTULUŞ İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">96362201</td>
-                <td data-label="Birim Adı">KUZUGÜDEN İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>96362201</td>
+                <td>KUZUGÜDEN İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">15108192</td>
-                <td data-label="Birim Adı">KÜLLÜK İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>15108192</td>
+                <td>KÜLLÜK İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">83685925</td>
-                <td data-label="Birim Adı">KÜLLÜK ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>83685925</td>
+                <td>KÜLLÜK ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">88165334</td>
-                <td data-label="Birim Adı">MAHMUT NEDİM KUYUMCU İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>88165334</td>
+                <td>MAHMUT NEDİM KUYUMCU İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">87573611</td>
-                <td data-label="Birim Adı">MAHMUT NEDİM KUYUMCU ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>87573611</td>
+                <td>MAHMUT NEDİM KUYUMCU ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">99658973</td>
-                <td data-label="Birim Adı">MAREŞAL FEVZİ ÇAKMAK İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>99658973</td>
+                <td>MAREŞAL FEVZİ ÇAKMAK İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">10143148</td>
-                <td data-label="Birim Adı">MAREŞAL FEVZİ ÇAKMAK ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>10143148</td>
+                <td>MAREŞAL FEVZİ ÇAKMAK ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">35027556</td>
-                <td data-label="Birim Adı">MEHMET AKİF ERSOY İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>35027556</td>
+                <td>MEHMET AKİF ERSOY İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">26501638</td>
-                <td data-label="Birim Adı">MEHMET AKİF ERSOY ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>26501638</td>
+                <td>MEHMET AKİF ERSOY ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">47410388</td>
-                <td data-label="Birim Adı">MEHMET ÇAVUŞ ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>47410388</td>
+                <td>MEHMET ÇAVUŞ ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">48983697</td>
-                <td data-label="Birim Adı">MEHMET ÇAVUŞ İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>48983697</td>
+                <td>MEHMET ÇAVUŞ İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">38976196</td>
-                <td data-label="Birim Adı">MEHMET ÇAVUŞ ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>38976196</td>
+                <td>MEHMET ÇAVUŞ ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">76533476</td>
-                <td data-label="Birim Adı">MEHMET MURAT İŞLER SOSYAL BİLİMLER LİSESİ MÜDÜRLÜĞÜ</td>
+                <td>76533476</td>
+                <td>MEHMET MURAT İŞLER SOSYAL BİLİMLER LİSESİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">33154980</td>
-                <td data-label="Birim Adı">MELEKLI ATATÜRK İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>33154980</td>
+                <td>MELEKLI ATATÜRK İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">16624705</td>
-                <td data-label="Birim Adı">MELEKLİ 100. YIL ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>16624705</td>
+                <td>MELEKLİ 100. YIL ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">64734267</td>
-                <td data-label="Birim Adı">MELEKLİ ŞEHİT ER AYTEKİN ARSLAN İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>64734267</td>
+                <td>MELEKLİ ŞEHİT ER AYTEKİN ARSLAN İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">76836628</td>
-                <td data-label="Birim Adı">MELEKLİ ŞEHİT PİYADE ÇAVUŞ TUNAY ŞAFAK ÇOK PROGRAMLI ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
+                <td>76836628</td>
+                <td>MELEKLİ ŞEHİT PİYADE ÇAVUŞ TUNAY ŞAFAK ÇOK PROGRAMLI ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">21428481</td>
-                <td data-label="Birim Adı">MESLEKİ VE TEKNİK EĞİTİM ŞUBE MÜDÜRLÜĞÜ</td>
+                <td>21428481</td>
+                <td>MESLEKİ VE TEKNİK EĞİTİM ŞUBE MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">80296712</td>
-                <td data-label="Birim Adı">MEVLANA İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>80296712</td>
+                <td>MEVLANA İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">70932003</td>
-                <td data-label="Birim Adı">MEZRA İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>70932003</td>
+                <td>MEZRA İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">62121662</td>
-                <td data-label="Birim Adı">MİMAR SİNAN İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>62121662</td>
+                <td>MİMAR SİNAN İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">18308660</td>
-                <td data-label="Birim Adı">MİMAR SİNAN İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>18308660</td>
+                <td>MİMAR SİNAN İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">67475100</td>
-                <td data-label="Birim Adı">MİMAR SİNAN ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>67475100</td>
+                <td>MİMAR SİNAN ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">91513079</td>
-                <td data-label="Birim Adı">MUTLAY SAYAN ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>91513079</td>
+                <td>MUTLAY SAYAN ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">95436171</td>
-                <td data-label="Birim Adı">MUTLAY SAYAN ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>95436171</td>
+                <td>MUTLAY SAYAN ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">24653408</td>
-                <td data-label="Birim Adı">NENE HATUN MESLEKİ VE TEKNİK ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
+                <td>24653408</td>
+                <td>NENE HATUN MESLEKİ VE TEKNİK ANADOLU LİSESİ MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">29767465</td>
-                <td data-label="Birim Adı">NİŞANKAYA İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>29767465</td>
+                <td>NİŞANKAYA İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">20920233</td>
-                <td data-label="Birim Adı">OBA İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>20920233</td>
+                <td>OBA İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">36796183</td>
-                <td data-label="Birim Adı">ORTAÖĞRETİM ŞUBE MÜDÜRLÜĞÜ</td>
+                <td>36796183</td>
+                <td>ORTAÖĞRETİM ŞUBE MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">29341830</td>
-                <td data-label="Birim Adı">ÖĞRETMEN YETİŞTİRME VE GELİŞTİRME ŞUBE MÜDÜRLÜĞÜ</td>
+                <td>29341830</td>
+                <td>ÖĞRETMEN YETİŞTİRME VE GELİŞTİRME ŞUBE MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">16278239</td>
-                <td data-label="Birim Adı">ÖĞRETMEN YETİŞTİRME VE GELİŞTİRME ŞUBE MÜDÜRLÜĞÜ</td>
+                <td>16278239</td>
+                <td>ÖĞRETMEN YETİŞTİRME VE GELİŞTİRME ŞUBE MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">82612132</td>
-                <td data-label="Birim Adı">ÖĞRETMENEVİ VE AKŞAM SANAT OKULU MÜDÜRLÜĞÜ</td>
+                <td>82612132</td>
+                <td>ÖĞRETMENEVİ VE AKŞAM SANAT OKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">76011903</td>
-                <td data-label="Birim Adı">ÖLÇME, DEĞERLENDİRME VE SINAV ŞUBE MÜDÜRLÜĞÜ</td>
+                <td>76011903</td>
+                <td>ÖLÇME, DEĞERLENDİRME VE SINAV ŞUBE MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">25144432</td>
-                <td data-label="Birim Adı">ÖZDEMİR İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>25144432</td>
+                <td>ÖZDEMİR İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">71629928</td>
-                <td data-label="Birim Adı">ÖZDEMİR ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>71629928</td>
+                <td>ÖZDEMİR ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">14051412</td>
-                <td data-label="Birim Adı">ÖZEL BÜRO</td>
+                <td>14051412</td>
+                <td>ÖZEL BÜRO</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">12184195</td>
-                <td data-label="Birim Adı">ÖZEL EĞİTİM VE REHBERLİK ŞUBE MÜDÜRLÜĞÜ</td>
+                <td>12184195</td>
+                <td>ÖZEL EĞİTİM VE REHBERLİK ŞUBE MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">64708217</td>
-                <td data-label="Birim Adı">IĞDIR ÖZEL EĞİTİM MESLEK OKULU</td>
+                <td>64708217</td>
+                <td>IĞDIR ÖZEL EĞİTİM MESLEK OKULU</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">28838520</td>
-                <td data-label="Birim Adı">IĞDIR ÖZEL EĞİTİM MESLEK OKULU</td>
+                <td>28838520</td>
+                <td>IĞDIR ÖZEL EĞİTİM MESLEK OKULU</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">13805266</td>
-                <td data-label="Birim Adı">ÖZEL ÖĞRETİM KURUMLARI ŞUBE MÜDÜRLÜĞÜ</td>
+                <td>13805266</td>
+                <td>ÖZEL ÖĞRETİM KURUMLARI ŞUBE MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">68621539</td>
-                <td data-label="Birim Adı">PINARBAŞI İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>68621539</td>
+                <td>PINARBAŞI İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">96014362</td>
-                <td data-label="Birim Adı">SİVİL SAVUNMA HİZMETLERİ BÜROSU</td>
+                <td>96014362</td>
+                <td>SİVİL SAVUNMA HİZMETLERİ BÜROSU</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">31219358</td>
-                <td data-label="Birim Adı">SÖĞÜTLÜ ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>31219358</td>
+                <td>SÖĞÜTLÜ ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">19255454</td>
-                <td data-label="Birim Adı">STRATEJİ GELİŞTİRME ŞUBE MÜDÜRLÜĞÜ</td>
+                <td>19255454</td>
+                <td>STRATEJİ GELİŞTİRME ŞUBE MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">96304802</td>
-                <td data-label="Birim Adı">SUVEREN İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>96304802</td>
+                <td>SUVEREN İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">33239757</td>
-                <td data-label="Birim Adı">SUVEREN İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>33239757</td>
+                <td>SUVEREN İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">97832061</td>
-                <td data-label="Birim Adı">SUVEREN ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>97832061</td>
+                <td>SUVEREN ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">23549226</td>
-                <td data-label="Birim Adı">SÜRMELİ ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>23549226</td>
+                <td>SÜRMELİ ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">84129660</td>
-                <td data-label="Birim Adı">ŞAMİL BEY İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>84129660</td>
+                <td>ŞAMİL BEY İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">70839775</td>
-                <td data-label="Birim Adı">ŞAMİL BEY ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>70839775</td>
+                <td>ŞAMİL BEY ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">12800638</td>
-                <td data-label="Birim Adı">ŞEHİT BAŞKOMİSER MEHMET PARLAK İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>12800638</td>
+                <td>ŞEHİT BAŞKOMİSER MEHMET PARLAK İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">45012387</td>
-                <td data-label="Birim Adı">ŞEHİT BAŞKOMİSER MEHMET PARLAK İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>45012387</td>
+                <td>ŞEHİT BAŞKOMİSER MEHMET PARLAK İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">46048980</td>
-                <td data-label="Birim Adı">ŞEHİT BAŞKOMİSER MEHMET PARLAK ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>46048980</td>
+                <td>ŞEHİT BAŞKOMİSER MEHMET PARLAK ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">16311421</td>
-                <td data-label="Birim Adı">ŞEHİT CİHAT SAYIM ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>16311421</td>
+                <td>ŞEHİT CİHAT SAYIM ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">78785592</td>
-                <td data-label="Birim Adı">ŞEHİT EMİN GÜNER ANADOLU İMAM HATİP LİSESİ MÜDÜRLÜĞÜ </td>
+                <td>78785592</td>
+                <td>ŞEHİT EMİN GÜNER ANADOLU İMAM HATİP LİSESİ MÜDÜRLÜĞÜ </td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">77459522</td>
-                <td data-label="Birim Adı">ŞEHİT EMİN GÜNER İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>77459522</td>
+                <td>ŞEHİT EMİN GÜNER İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">95551082</td>
-                <td data-label="Birim Adı">ŞEHİT ER ERKAN AKDENİZ ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>95551082</td>
+                <td>ŞEHİT ER ERKAN AKDENİZ ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">88823732</td>
-                <td data-label="Birim Adı">ŞEHİT ER ERKAN AKDENİZ İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>88823732</td>
+                <td>ŞEHİT ER ERKAN AKDENİZ İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">21532411</td>
-                <td data-label="Birim Adı">ŞEHİT ER ERKAN AKDENİZ ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>21532411</td>
+                <td>ŞEHİT ER ERKAN AKDENİZ ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">89832577</td>
-                <td data-label="Birim Adı">ŞEHİT ER MEHMET ÖNER İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>89832577</td>
+                <td>ŞEHİT ER MEHMET ÖNER İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">94059778</td>
-                <td data-label="Birim Adı">ŞEHİT ER ZEYNEL ABİDİN KAYA ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>94059778</td>
+                <td>ŞEHİT ER ZEYNEL ABİDİN KAYA ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">50857069</td>
-                <td data-label="Birim Adı">ŞEHİT EREN BÜLBÜL ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>50857069</td>
+                <td>ŞEHİT EREN BÜLBÜL ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">76465949</td>
-                <td data-label="Birim Adı">ŞEHİT KOMİSER MEHMET PARLAK İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>76465949</td>
+                <td>ŞEHİT KOMİSER MEHMET PARLAK İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">36807707</td>
-                <td data-label="Birim Adı">ŞEHİT ÖĞRETMEN AYBÜKE YALÇIN ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>36807707</td>
+                <td>ŞEHİT ÖĞRETMEN AYBÜKE YALÇIN ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">15958519</td>
-                <td data-label="Birim Adı">ŞEHİT ÖĞRETMEN NECMETTİN YILMAZ ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>15958519</td>
+                <td>ŞEHİT ÖĞRETMEN NECMETTİN YILMAZ ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">93884086</td>
-                <td data-label="Birim Adı">ŞEHİT ÖĞRETMEN ŞEVKİ AKGÜN İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>93884086</td>
+                <td>ŞEHİT ÖĞRETMEN ŞEVKİ AKGÜN İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">40790404</td>
-                <td data-label="Birim Adı">ŞEHİT ÖĞRETMEN ŞEVKİ AKGÜN İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>40790404</td>
+                <td>ŞEHİT ÖĞRETMEN ŞEVKİ AKGÜN İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">53756394</td>
-                <td data-label="Birim Adı">ŞEHİT ÖĞRETMEN ŞEVKİ AKGÜN ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>53756394</td>
+                <td>ŞEHİT ÖĞRETMEN ŞEVKİ AKGÜN ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">91188263</td>
-                <td data-label="Birim Adı">ŞEHİT PİYADE ER ERDEM YÜCE İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>91188263</td>
+                <td>ŞEHİT PİYADE ER ERDEM YÜCE İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">74954732</td>
-                <td data-label="Birim Adı">ŞEHİT POLİS ADEM CANKURTARAN ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>74954732</td>
+                <td>ŞEHİT POLİS ADEM CANKURTARAN ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">43134821</td>
-                <td data-label="Birim Adı">ŞEHİT POLİS İSMET YILDIZ İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>43134821</td>
+                <td>ŞEHİT POLİS İSMET YILDIZ İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">44809883</td>
-                <td data-label="Birim Adı">ŞEHİT POLİS KEMAL ADİR İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>44809883</td>
+                <td>ŞEHİT POLİS KEMAL ADİR İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">89450690</td>
-                <td data-label="Birim Adı">ŞEHİT POLİS MEHMET KESEMEN İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>89450690</td>
+                <td>ŞEHİT POLİS MEHMET KESEMEN İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">29005611</td>
-                <td data-label="Birim Adı">ŞEHİT POLİS VELİ KABALAY ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>29005611</td>
+                <td>ŞEHİT POLİS VELİ KABALAY ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">32942926</td>
-                <td data-label="Birim Adı">ŞEHİT POLİS VELİ KABALAY ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>32942926</td>
+                <td>ŞEHİT POLİS VELİ KABALAY ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">56631376</td>
-                <td data-label="Birim Adı">ŞEHİT ÜSTEĞMEN CEVDET ÇİFTÇİ İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>56631376</td>
+                <td>ŞEHİT ÜSTEĞMEN CEVDET ÇİFTÇİ İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">31564710</td>
-                <td data-label="Birim Adı">ŞEYH EDABALİ İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>31564710</td>
+                <td>ŞEYH EDABALİ İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">85301891</td>
-                <td data-label="Birim Adı">ŞEYH EDEBALİ ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>85301891</td>
+                <td>ŞEYH EDEBALİ ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">53262058</td>
-                <td data-label="Birim Adı">ŞUŞA ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>53262058</td>
+                <td>ŞUŞA ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">39914768</td>
-                <td data-label="Birim Adı">TACİRLİ İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>39914768</td>
+                <td>TACİRLİ İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">20875565</td>
-                <td data-label="Birim Adı">TACİRLİ İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>20875565</td>
+                <td>TACİRLİ İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">50510358</td>
-                <td data-label="Birim Adı">TAŞLICA İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>50510358</td>
+                <td>TAŞLICA İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">49829484</td>
-                <td data-label="Birim Adı">TEMEL EĞİTİM ŞUBE MÜDÜRLÜĞÜ</td>
+                <td>49829484</td>
+                <td>TEMEL EĞİTİM ŞUBE MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">24062935</td>
-                <td data-label="Birim Adı">YAYCI 75. YIL İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>24062935</td>
+                <td>YAYCI 75. YIL İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">31145354</td>
-                <td data-label="Birim Adı">YAYCI 75. YIL ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>31145354</td>
+                <td>YAYCI 75. YIL ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">87117207</td>
-                <td data-label="Birim Adı">YENİ MAHALLE İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>87117207</td>
+                <td>YENİ MAHALLE İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">26748477</td>
-                <td data-label="Birim Adı">YUKARI ÇARIKÇI İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>26748477</td>
+                <td>YUKARI ÇARIKÇI İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">54797042</td>
-                <td data-label="Birim Adı">YUKARI ÇARIKÇI ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>54797042</td>
+                <td>YUKARI ÇARIKÇI ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">90985878</td>
-                <td data-label="Birim Adı">YUKARI ERHACI İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>90985878</td>
+                <td>YUKARI ERHACI İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">24700507</td>
-                <td data-label="Birim Adı">YUKARI ERHACI İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>24700507</td>
+                <td>YUKARI ERHACI İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">39344541</td>
-                <td data-label="Birim Adı">YUKARI ERHACI ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>39344541</td>
+                <td>YUKARI ERHACI ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">74153608</td>
-                <td data-label="Birim Adı">YUNUS EMRE İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>74153608</td>
+                <td>YUNUS EMRE İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">47418840</td>
-                <td data-label="Birim Adı">YUNUS EMRE ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>47418840</td>
+                <td>YUNUS EMRE ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">99375282</td>
-                <td data-label="Birim Adı">YÜKSEKÖĞRETİM VE YURT DIŞI EĞİTİM ŞUBE MÜDÜRLÜĞÜ</td>
+                <td>99375282</td>
+                <td>YÜKSEKÖĞRETİM VE YURT DIŞI EĞİTİM ŞUBE MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">15224104</td>
-                <td data-label="Birim Adı">YÜZBAŞI ABDURRAHMAN ÖZALP İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>15224104</td>
+                <td>YÜZBAŞI ABDURRAHMAN ÖZALP İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">19280230</td>
-                <td data-label="Birim Adı">YÜZBAŞILAR ŞEHİT ER AYDIN KARAKUŞ İLKOKULU MÜDÜRLÜĞÜ</td>
+                <td>19280230</td>
+                <td>YÜZBAŞILAR ŞEHİT ER AYDIN KARAKUŞ İLKOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">85020208</td>
-                <td data-label="Birim Adı">YÜZBAŞILAR ŞEHİT ER AYDIN KARAKUŞ İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>85020208</td>
+                <td>YÜZBAŞILAR ŞEHİT ER AYDIN KARAKUŞ İMAM HATİP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">53165598</td>
-                <td data-label="Birim Adı">YÜZBAŞILAR ŞEHİT ER AYDIN KARAKUŞ ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>53165598</td>
+                <td>YÜZBAŞILAR ŞEHİT ER AYDIN KARAKUŞ ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">81953586</td>
-                <td data-label="Birim Adı">ZİYA GÖKALP ORTAOKULU MÜDÜRLÜĞÜ</td>
+                <td>81953586</td>
+                <td>ZİYA GÖKALP ORTAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">59762723</td>
-                <td data-label="Birim Adı">ZÜBEYDE HANIM ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>59762723</td>
+                <td>ZÜBEYDE HANIM ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
             <tr>
-                <td data-label="Detsis Numarası">19883201</td>
-                <td data-label="Birim Adı">ZÜBEYDE HANIM ÖZEL EĞİTİM ANAOKULU MÜDÜRLÜĞÜ</td>
+                <td>19883201</td>
+                <td>ZÜBEYDE HANIM ÖZEL EĞİTİM ANAOKULU MÜDÜRLÜĞÜ</td>
             </tr>
     
         </tbody>
     </table>
-    <script>
-        function searchTable() {
-            var input = document.getElementById("searchInput");
-            var filter = input.value.toLowerCase();
-            var rows = document.querySelectorAll("#dataTable tbody tr");
+</div>
 
-            rows.forEach(row => {
-                var text = row.textContent.toLowerCase();
-                row.style.display = text.includes(filter) ? "" : "none";
-            });
+<script>
+    function searchTable() {
+        const input = document.getElementById("searchInput");
+        const filter = input.value.toLowerCase();
+        const table = document.getElementById("dataTable");
+        const rows = table.getElementsByTagName("tr");
+
+        let found = false;
+        for (let i = 1; i < rows.length; i++) {
+            let rowText = rows[i].textContent.toLowerCase();
+            if (rowText.includes(filter)) {
+                rows[i].style.display = "";
+                found = true;
+            } else {
+                rows[i].style.display = "none";
+            }
         }
-    </script>
+
+        // Sonuç varsa tabloyu göster, yoksa gizle
+        table.style.display = found ? "table" : "none";
+    }
+</script>
+
 </body>
 </html>
